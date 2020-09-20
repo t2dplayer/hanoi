@@ -3,6 +3,7 @@
 <br>
 A torre de hanói é uma espécie de quebra-cabeça com três pinos e alguns discos, cujo objetivo é transferir todos os discos do primeiro pino para o terceiro pino.
 A regra principal é "O disco de cima não pode ser maior que o de baixo"
+veja o resultado: (josecarlos.dev/torre_hanoi)
 
 <b>josecarlos.dev</b>
 
