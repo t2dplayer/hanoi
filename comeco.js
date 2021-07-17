@@ -1,34 +1,19 @@
 /*
-Comeco
-
-
-Torre de Hanoi
-
-josecarlos.dev
-
-desenvolvido por José Carlos - 2020
-
-
+Torre de Hanoi - josecarlos.dev
+Desenvolvido por José Carlos - 2020
+Modificado por: Sérgio Vieira - 2021 - sergio.vieira@ifce.edu.br
 */
 
-var  g = 4;
+var editor = null;
+
 window.onload = function(){
-	
-
-var u = setInterval(mudarblur,100);
-	
-	
-}
-
-function mudarblur(){
-g=g-0.5;
-document.getElementById("logo_comeco").style.filter = 'blur('+g+'px)';	
-
-if(g<-10) {
-	
-	document.getElementById("tela_comeco").style.display = "none";
-	clearInterval(u);
-	
-}
-
+	editor = CodeMirror(function(elt) {
+		myTextArea.parentNode.replaceChild(elt, myTextArea);
+	}, {
+		  value: myTextArea.value,
+		  styleActiveLine: { nonEmpty: true },
+		  lineNumbers: true,
+		  styleActiveSelected: true,
+	});
+	//var u = setInterval(mudarblur,100);
 }

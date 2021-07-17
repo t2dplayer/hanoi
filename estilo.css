@@ -1,259 +1,272 @@
+.player {
+    position: relative;
+    display: inline-block;
+    z-index: 10;
+}
 
-#area{
-width: 100%;
-height: 100%;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%,-50%);
+#area {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.area_int {
+  height: 100%;
+  position: absolute;
+  top: 0px;
+}
+
+.haste div {
+  color: white;
+  font-size: 50px;
+  font-weight: bolder;
+  left: -80%;
+  position: inherit;
+}
+
+.haste {
+  width: 20%;
+  height: 50%;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.disco {
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5),
+    0px 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  border-radius: 8px 8px 0px 0px;
+  outline: none;
+  border: none;
+}
+
+.disco:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5),
+    0px 0px 1px 5px rgba(0, 0, 0, 0.8) inset;
+  font-size: 20px;
+}
+
+.disco:focus{
+    background-color:red;
 }
 
 
-.area_int{
-height:100%;
-position: absolute;
-top: 0px;
+.comp_disco {
+  width: 100%;
+  height: 7%;
+  position: relative;
+  z-index: 2;
+  display: none;
 }
 
-
-.haste{
-width: 20%;
-height: 80%;
-bottom: 0px;
-left: 50%;
-transform: translate(-50%,0%);
-position: absolute;
-background-color: #ffffff;
-box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
-z-index: 1;
-border-radius: 20px 20px 0px 0px;
+.px {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  color: rgba(0, 0, 0, 0.8);
+  transform: translate(-50%, -50%);
+  font-family: Arial;
+  font-size: 30px;
 }
 
-.disco{
-height: 100%;
-left: 50%;
-top: 50%;
-transform: translate(-50%,-50%);
-position: absolute;
-background-color: #ffffff;
-box-shadow: 0px 0px 10px rgba(0,0,0,0.5), 0px 0px 1px 2px rgba(0,0,0,0.3) inset;
-border-radius: 8px 8px 0px 0px;
-outline: none;
-border: none;
+#espaco1,
+#espaco2,
+#espaco3 {
+  width: 100%;
+  height: 7%;
+  position: relative;
 }
 
-.disco:hover{
-box-shadow: 0px 0px 10px rgba(0,0,0,0.5), 0px 0px 1px 5px rgba(0,0,0,0.8) inset;
-font-size: 20px;
+.aviso_erro {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  display: none;
 }
 
-.comp_disco{
-width: 100%;
-height: 13%;
-position: relative;
-z-index: 2;
-display: none;
+#aviso_t {
+  width: auto;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  z-index: 3;
+  border-radius: 10px;
+  font-family: Arial;
+  font-size: 20px;
+  padding: 10px;
+  z-index: 5;
 }
 
-.px{
-top: 50%;
-left: 50%;
-position: absolute;
-color: rgba(0,0,0,0.8);
-transform: translate(-50%,-50%);
-font-family: Arial;
-font-size: 30px;
+#bx {
+  width: 40px;
+  height: 40px;
+  top: 5px;
+  right: 5px;
+  position: absolute;
+  border-radius: 10px;
+  border: none;
+  font-size: 25px;
+  outline: none;
 }
 
-
-#espaco1, #espaco2, #espaco3{
-width: 100%;
-height: 9%;
-position: relative;
+#bx:hover {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
-.aviso_erro{
-width: 100%;
-height: 100%;
-top: 0px;
-left: 0px;
-position: absolute;
-background-color: rgba(0,0,0,0.5);
-z-index: 3;
-display: none;
+#logo {
+  width: 50%;
+  height: 9%;
+  position: absolute;
+  left: 50%;
+  top: 15px;
+  transform: translate(-50%, 0%);
+  background-image: url(josecarlos_dev.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
-
-#aviso_t{
-width: auto;
-height: auto;
-top: 50%;
-left: 50%;
-position: absolute;
-transform: translate(-50%,-50%);
-background-color: rgba(255,255,255,0.9);
-box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
-z-index: 3;
-border-radius: 10px;
-font-family: Arial;
-font-size: 20px;
-padding: 10px;
-z-index: 5;
+#area_white {
+  width: auto;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  font-size: 20px;
+  font-family: Arial;
+  padding: 20px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
 }
 
-#bx{
-width: 40px; 
-height: 40px; 
-top: 5px; 
-right: 5px; 
-position: absolute; 
-border-radius: 10px;
-border: none;
-font-size: 25px;
-outline: none;
+.bu {
+  width: 40px;
+  height: 40px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  transition: width 0.1s, height 0.1s;
 }
 
-
-#bx:hover{
-background-color: rgba(0,0,0,0.3);
+.bu:hover {
+  width: 45px;
+  height: 45px;
+  background-color: #ff6000;
 }
 
-
-
-#logo{
-width: 50%;
-height: 9%;
-position: absolute;
-left: 50%;
-top: 15px;
-transform: translate(-50%,0%);
-background-image: url(josecarlos_dev.png);
-background-size: 100%;
-background-repeat: no-repeat;
+.numero_mov {
+  width: auto;
+  height: auto;
+  position: relative;
+  display: inline-block;
+  z-index: 3;
+  font-family: Arial;
+  font-size: 45px;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 5px;
+  top: 0px;
+  left: 0px;
 }
 
-#area_white{
-width: auto;
-height: auto;
-position: absolute;
-left: 50%;
-top: 50%;
-transform: translate(-50%,-50%);
-background-color: #ffffff;
-font-size: 20px;
-font-family: Arial;
-padding: 20px;
-box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
+.num_mov {
+  color: rgba(255, 255, 255, 1);
 }
 
-.bu{
-width: 40px;
-height: 40px;
-outline: none;
-border: none;
-font-size: 20px;
-background-color: rgba(0,0,0,0.9);
-color: #ffffff;
-border-radius: 5px;
-padding: 10px;
-border-radius: 50%;
-box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-transition: width 0.1s, height 0.1s;
+#reini {
+  padding: 10px;
+  outline: none;
+  border: none;
+  background-color: #b22222;
+  color: #ffffff;
 }
 
-.bu:hover{
-width: 45px;
-height: 45px;
-background-color: #ff6000;
+.definir_botao {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+  position: absolute;
+  outline: none;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
 }
 
-.numero_mov{
-width: auto;
-height: auto;
-position: relative;
-display: inline-block;
-z-index: 3;
-font-family: Arial;
-font-size: 20px;
-color: rgba(255,255,255,0.7);
-padding: 5px;
-top: 0px;
-left: 0px;
+#tela_comeco {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 8;
+  position: absolute;
+  background-color: #296aba;
+  display: block;
 }
 
-.num_mov{
-color: rgba(255,255,255,1);
+#logo_comeco {
+  width: 336px;
+  height: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  background-size: 100% 100%;
+  background-image: url(josecarlos_dev_2.png);
+  filter: blur(4px);
+  transition: filter 0.2s;
 }
 
-#reini{
-padding: 10px;
-outline: none;
-border: none;
-background-color: #B22222;
-color: #ffffff;	
+#imagem_int {
+  width: 600px;
+  height: 245px;
+  background-color: #000000;
+  position: relative;
+  transform: translate(-50%, 0%);
+  left: 50%;
+  background-image: url(exemplo.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: block;
 }
 
-.definir_botao{
-width: 100%;
-height: 100%;
-top: 0px;
-left: 0px;
-z-index: 0;
-position: absolute;
-outline: none;
-border: none;
-background-color: rgba(0,0,0,0);
-}
+@media only screen and (max-width: 900px) {
+  #imagem_int {
+    display: none;
+  }
 
-#tela_comeco{
-width: 100%;
-height: 100%;
-top: 0px;
-left: 0px;
-z-index: 8;
-position: absolute;
-background-color: #296aba;
-display: block;
-}
-
-#logo_comeco{
-width: 336px;
-height: 60px;
-top: 50%;
-left: 50%;
-transform: translate(-50%,-50%);
-position: absolute;
-background-size: 100% 100%;
-background-image: url(josecarlos_dev_2.png);
-filter: blur(4px);
-transition: filter 0.2s;
-}
-
-#imagem_int{
-width: 600px; 
-height: 245px; 
-background-color: #000000; 
-position: relative;
-transform: translate(-50%,0%);
-left: 50%;
-background-image: url(exemplo.png);
-background-size: 100%;
-background-repeat: no-repeat;
-display: block;	
-}
-
-@media only screen and (max-width: 900px){
-	
-#imagem_int{
-display: none;
-}
-
-#area_white{
-width: 90%;
-height: 80%;
-left: 50%;
-top: 50%;
-transform: translate(-50%,-50%);
-}
-
+  #area_white {
+    width: 90%;
+    height: 80%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
