@@ -7,4 +7,5 @@ A regra principal é "O disco de cima não pode ser maior que o de baixo"
 
 <b>josecarlos.dev</b>
 
-desenvolvido por José Carlos - 2020
+Desenvolvido por José Carlos - 2020
+Modificado por Sérgio Vieira 2021 - sergio.vieira@ifce.edu.br
