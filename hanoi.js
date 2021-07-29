@@ -118,25 +118,62 @@ function Gerar(tamanho, torre, ordem) {
   };
 }
 
+function reset_controls() {
+	let elements = new Map([
+		["start", false],
+		["next", true],
+		["cancel", true]
+	]);
+	for (let [key, value] of elements) {
+		document.getElementById(key).disabled = value;
+	};
+}
+
+function start_controls() {
+	let elements = new Map([
+		["start", true],
+		["next", false],
+		["cancel", false]
+	]);
+	for (let [key, value] of elements) {
+		document.getElementById(key).disabled = value;
+	};
+}
+
 function start() {
 	if (editor != null) {
 		var lines = editor.getValue();
 		commands = lines.split('\n');
-		currentLine = 0;
-		editor.getDoc().markText({line:currentLine,ch:0},{line:currentLine,ch:3},{css: "background-color: yellow"});
+		if (commands.length == 1
+			&& commands[0].length == 0) {
+			alert('Não há comandos digitados!');
+		} else {
+			start_controls();
+			currentLine = 0;
+			editor.getDoc().markText(
+				{line:currentLine, ch:0},
+				{line:currentLine, ch:3},
+				{css: "background-color: yellow"}
+			);
+		}
 	}
 }
 
 function parse(input) {
+	if (input === undefined
+		|| input.length != 3) {
+		return [];
+	}
 	return [input[0], input[1], input[2]];
 }
 
 function pinIndex(pin) {
-	var map = {
+	let map = {
 		'A': 1,
 		'B': 2,
 		'C': 3,
 	};
+	if (map[pin] === undefined) return -1;
 	return map[pin];
 }
 
@@ -144,20 +181,44 @@ function execute(token) {
 	var disc = parseInt(token[0]);
 	var src_pin = pinIndex(token[1]);
 	var dst_pin = pinIndex(token[2]);
-	disc = 7 - numeross + disc;
-	definir_disco(disc, src_pin)
-	definir_pino(dst_pin);	
-	currentLine++;
-	editor.getDoc().markText({line:currentLine - 1,ch:0},{line:currentLine - 1,ch:3},{css: "background-color: transparent"});
-	editor.getDoc().markText({line:currentLine,ch:0},{line:currentLine,ch:3},{css: "background-color: yellow"});
+	if (isNaN(disc)) {
+		alert("Comando inválido!. O primeiro caractere deve ser numérico. Ex: 1AB");
+	} else {
+		disc = 7 - numeross + disc;
+		if (src_pin != -1 && dst_pin != -1) {
+			definir_disco(disc, src_pin)
+			definir_pino(dst_pin);	
+			currentLine++;
+			editor.getDoc().markText(
+				{line:currentLine - 1,ch:0},
+				{line:currentLine - 1,ch:3},
+				{css: "background-color: transparent"}
+			);
+			editor.getDoc().markText(
+				{line:currentLine,ch:0},
+				{line:currentLine,ch:3},
+				{css: "background-color: yellow"}
+			);
+		} else {
+			alert("Identificador de haste inválido. Os válidos são A, B ou C");
+		}
+	}
 }
 
 function next() {
 	var command = commands[currentLine];
 	var token = parse(command);
-	execute(token);	
+	if (token.length != 3) {
+		alert("Commando inválido!! São necessários 3 caracteres. Ex: 1AB");
+	} else {
+		execute(token);
+		if (currentLine == commands.length) {
+			document.getElementById("next").disabled = true;
+		}
+	}
 }
 
-function previous() {
-
+function try_again() {
+	reset_controls();
+	iniciar(number_of_pins);
 }

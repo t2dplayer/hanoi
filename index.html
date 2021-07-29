@@ -255,10 +255,10 @@ desenvolvido por José Carlos - 2020
         <button class="definir_botao" onclick="definir_pino(3)"></button>
       </div>
       <div id="editor">
-		<textarea id="myTextArea"></textarea>
-		<button id="start" class="player" onclick="start()">Iniciar</button>
-		<button id="next" class="player" onclick="next()">Próximo</button>
-		<button id="previous" class="player">Anterior</button>
+        <textarea id="myTextArea"></textarea>
+        <button id="start" class="player" onclick="start()">Iniciar</button>
+        <button id="next" class="player" onclick="next()" disabled>Próximo</button>
+        <button id="cancel" class="player" onclick="try_again()" disabled>Tentar novamente</button>
       </div>
     </div>
     <script src="gerar_graficos.js"></script>

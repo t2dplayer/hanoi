@@ -12,6 +12,7 @@ var num_pi = []; // array que armazena o numero discos em cada pino
 var ganhou = 0; // variavel que indica se o jogador ganhou ou nao o jogo
 
 function iniciar(env) {
+  number_of_pins = env;
   numeross = env;
 
   gerar_graficos(numeross);

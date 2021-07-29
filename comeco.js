@@ -5,6 +5,7 @@ Modificado por: Sérgio Vieira - 2021 - sergio.vieira@ifce.edu.br
 */
 
 var editor = null;
+var number_of_pins = 0;
 
 window.onload = function(){
 	editor = CodeMirror(function(elt) {
